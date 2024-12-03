@@ -1,0 +1,27 @@
+<p>ly! Here’s the full README.md you can copy and paste:</p>
+<p>markdown</p>
+<p>Copy code # Air Quality Dashboard</p>
+<p>This is a React.js application that connects to a GraphQL server to display current air quality data.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you begin, ensure you have met the following requirements:</p>
+<ul>
+<li><strong>Node.js</strong>: Version 23.3 is required. You can download it <a href="https://nodejs.org/">here</a>.</li>
+<li><strong>npm</strong>: Node package manager, which comes with Node.js, is used to manage dependencies.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<ol type="1">
+<li><p><strong>Clone the repository:</strong></p>
+<p>```bash git clone <repository-url> cd <repository-directory></p></li>
+</ol>
+<p>Install dependencies: Run the following command to install the necessary packages using npm:</p>
+<p>bash</p>
+<p>Copy code npm install</p>
+<p>This will install all needed packages specified in package.json, including the Apollo Client:</p>
+<p>bash</p>
+<p>Copy code npm install <span class="citation" data-cites="apollo/client">@apollo/client</span></p>
+<p>Configuration: Ensure that your GraphQL server endpoint is properly set up in your application. You may need to modify the configuration file located at src/config.js (or wherever your endpoint is specified).</p>
+<p>Running the Application To start the React application, run the following command:</p>
+<p>bash</p>
+<p>Copy code npm start</p>
+<p>The application will be served at http://localhost:3000 by default, and you should be able to see the current air quality data on the dashboard, which connects to your configured GraphQL server.</p>
+<p>Technologies Used React.js: Frontend library for building the user interface. Apollo Client: For interfacing with the GraphQL server and managing application data. Node.js: As the backend runtime environment. Troubleshooting Ensure that Node.js version 23.3 is correctly installed, as using a different version might lead to unexpected errors. Verify that the GraphQL server is running and accessible from the application. Check the browser console for any potential errors and debug information.</p>
