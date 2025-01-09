@@ -1,0 +1,2 @@
+# Now using node v23.3.0 (npm v10.9.0)
+nvm use 23.3.0
