@@ -1,6 +1,6 @@
 import { gql, useQuery  } from '@apollo/client';
 
-const GET_LATEST_AIRVISUAL_DEVICE_MEASUREMENT = gql`
+export const GET_LATEST_AIRVISUAL_DEVICE_MEASUREMENT = gql`
   query GetLatestAirVisualDeviceMeasurement {
     getLatestAirVisualDeviceMeasurement  {
     air_visual_device_measurement  {
@@ -21,7 +21,7 @@ const GET_LATEST_AIRVISUAL_DEVICE_MEASUREMENT = gql`
 `;
 
 
-export default function LatestAirVisualDeviceMeasurement () {
+export function LatestAirVisualDeviceMeasurement () {
   const { loading, error, data } = useQuery(GET_LATEST_AIRVISUAL_DEVICE_MEASUREMENT);
 
   if (loading) return 'Loading...';
