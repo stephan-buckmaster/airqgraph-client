@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import LatestAirVisualDeviceMeasurement from './LatestAirVisualDeviceMeasurement';
-
 import {  ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { LatestAirVisualDeviceMeasurement } from './LatestAirVisualDeviceMeasurement';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
