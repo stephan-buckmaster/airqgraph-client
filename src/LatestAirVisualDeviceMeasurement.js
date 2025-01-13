@@ -24,7 +24,7 @@ export const GET_LATEST_AIRVISUAL_DEVICE_MEASUREMENT = gql`
 export function LatestAirVisualDeviceMeasurement () {
   const { loading, error, data } = useQuery(GET_LATEST_AIRVISUAL_DEVICE_MEASUREMENT);
 
-  if (loading) return 'Loading...';
+  if (loading) return(<div>Loading...</div>);
   if (error) return `Error! ${error.message}`;
 
   let d = data.getLatestAirVisualDeviceMeasurement.air_visual_device_measurement;

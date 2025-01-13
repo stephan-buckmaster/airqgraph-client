@@ -1,7 +1,9 @@
 import React from 'react';
+import { act } from "react-dom/test-utils";
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react';
 import { MockedProvider } from '@apollo/client/testing';
+
 import { GET_LATEST_AIRVISUAL_DEVICE_MEASUREMENT, LatestAirVisualDeviceMeasurement } from '../LatestAirVisualDeviceMeasurement';
 
 const mocks = [
@@ -32,6 +34,7 @@ const mocks = [
   },
 ];
 
+
 test('renders air quality data correctly', async () => {
   render(
     <MockedProvider mocks={mocks} addTypename={false}>
@@ -54,15 +57,13 @@ test('renders air quality data correctly', async () => {
   expect(screen.getByText(/600 ppm/)).toBeInTheDocument(); // CO2
 });
 
-// 
-//test('displays loading state initially', () => {
-//  render(
-//    <MockedProvider mocks={[]}> {/* No mocks means it will stay in loading */}
-//      <LatestAirVisualDeviceMeasurement />
-//    </MockedProvider>
-//  );
-//
-//  expect(screen.getByText('Loading...')).toBeInTheDocument();
-//});
-//*/
+ 
+test('displays loading state initially', async() => {
+  render( 
+    <MockedProvider mocks={[]} addTypename={false}>{/* No mocks means it will stay in loading */}
+      <LatestAirVisualDeviceMeasurement />
+    </MockedProvider>
+  );
 
+  expect(screen.getByText('Loading...')).toBeInTheDocument();
+});
