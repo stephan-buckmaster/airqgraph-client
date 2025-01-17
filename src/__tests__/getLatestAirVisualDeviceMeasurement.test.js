@@ -1,7 +1,6 @@
-import { React, act } from 'react'; //-dom/test-utils";
-import '@testing-library/jest-dom'
-import { render, screen } from '@testing-library/react';
 import { MockedProvider } from "@apollo/react-testing";
+import { render, screen } from '@testing-library/react';
+import { React, act } from 'react'
 
 import { GET_LATEST_AIRVISUAL_DEVICE_MEASUREMENT, LatestAirVisualDeviceMeasurement } from '../LatestAirVisualDeviceMeasurement';
 
@@ -55,8 +54,8 @@ test('renders air quality data correctly', async () => {
 
  
 test('displays loading state initially', async() => {
-const delayMock = {...mock}
-delayMock['delay'] = 20
+  const delayMock = {...mock}
+  delayMock['delay'] = 20
   render( 
     <MockedProvider mocks={[delayMock]} addTypename={false}>{/* No mocks means it will stay in loading */}
       <LatestAirVisualDeviceMeasurement />
