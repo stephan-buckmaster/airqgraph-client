@@ -27,13 +27,15 @@ export function LatestAirVisualDeviceMeasurement () {
   if (loading) return(<div>Loading...</div>);
   if (error) return `Error! ${error.message}`;
 
-  let d = data.getLatestAirVisualDeviceMeasurement.air_visual_device_measurement;
-  let time = new Date(d.ts);
+  const d = data.getLatestAirVisualDeviceMeasurement.air_visual_device_measurement;
+  const time = new Date(d.ts);
+  const location = process.env.REACT_APP_LOCATION
   return (
 	  <div id="air-quality-data">
 	  	<h1>Air Quality Data</h1>
 		<dl>
-		  <dt>Time</dt><dd>{time.toString() /* format("DD/MM/YYYY HH:mm")*/}</dd>
+		  <dt>Time</dt><dd>{time.toString()}</dd>
+		  <dt>Location</dt><dd>{location}</dd>
 		  <dt>Temperature</dt><dd>{d.tp} °C</dd>
 		  <dt>Humidity</dt><dd>{d.hm} %</dd>
 		  <dt>Pressure</dt><dd>{d.pr/100} mbar</dd>

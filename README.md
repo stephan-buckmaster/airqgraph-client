@@ -35,10 +35,11 @@ npm install @apollo/client
 
 Ensure that your GraphQL server endpoint is properly set up in your application. You may need to modify the configuration file located at src/config.js (or wherever your endpoint is specified).
 
-Place the URL in the .env file, for example:
+Place the URL and descriptive location in the .env file, for example:
 
 ```
 REACT_APP_AIRQGRAPH_SERVER_URL=http://localhost:5000/graphql
+REACT_APP_LOCATION='Your descriptive place, Your city'
 ```
 
 # Create a map file / background

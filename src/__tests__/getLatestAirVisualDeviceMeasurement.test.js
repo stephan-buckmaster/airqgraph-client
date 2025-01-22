@@ -45,7 +45,7 @@ test('renders air quality data correctly', async () => {
   expect(screen.getByText(/95 %/i)).toBeInTheDocument();
   expect(screen.getByText(/1013.25 mbar/i)).toBeInTheDocument();
   expect(screen.getByText(/75/)).toBeInTheDocument(); // US AQI
-  expect(screen.getByText(/80/)).toBeInTheDocument(); // CN AQI
+  expect(screen.getByText('80')).toBeInTheDocument(); // CN AQI
   expect(screen.getByText(/35.5 µg\/m³/)).toBeInTheDocument(); // PM2.5
   expect(screen.getByText(/42 µg\/m³/)).toBeInTheDocument(); // PM10
   expect(screen.getByText(/15 µg\/m³/)).toBeInTheDocument(); // PM1.0
