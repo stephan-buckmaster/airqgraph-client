@@ -41,7 +41,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Light blue background */
     color: #333;
 }
 
@@ -65,7 +64,7 @@ h1 {
 }
 
 dl {
-    background-color: #e6f2ff; /* Very light blue */
+    background-color: transparent;
     padding: 16px;
     border-radius: 8px;
     display: flex;
@@ -90,7 +89,7 @@ dd {
     padding-left: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .container {
         padding: 8px;
     }
@@ -111,4 +110,40 @@ dd {
     dd {
       margin-bottom: 10px;
     }
+}
+
+div#air-quality-data {
+  min-width: 300px;
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid #5E8D9F;
+  border-radius: 5px;
+  background: white;
+  opacity: 0.7;
+  padding: 10px;
+  margin-top: 20px;
+}
+.appWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  overflow-y: auto;
+
+  /* Pseudo element */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/map.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    /* Adjust the opacity */
+    opacity: 0.4; /* Changes only to this pseudo-element's transparency */
+    z-index: -1; /* Sit below all direct child elements of .appWrapper */
+  }
 }

@@ -38,7 +38,7 @@ test('renders air quality data correctly', async () => {
   );
 
   // Optionally, wait for specific query to resolve
-  const timestamp = await screen.findByText('2024-12-03T02:11:11.000Z');
+  const timestamp = await screen.findByText('Mon Dec 02 2024 18:11:11 GMT-0800 (Pacific Standard Time)')
   expect(timestamp).toBeInTheDocument();
   expect(screen.getByText('Temperature')).toBeInTheDocument();
   expect(screen.getByText(/23 °C/i)).toBeInTheDocument();

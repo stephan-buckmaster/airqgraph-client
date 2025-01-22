@@ -28,11 +28,12 @@ export function LatestAirVisualDeviceMeasurement () {
   if (error) return `Error! ${error.message}`;
 
   let d = data.getLatestAirVisualDeviceMeasurement.air_visual_device_measurement;
+  let time = new Date(d.ts);
   return (
-	  <div>
+	  <div id="air-quality-data">
 	  	<h1>Air Quality Data</h1>
 		<dl>
-		  <dt>Timestamp</dt><dd>{d.ts}</dd>
+		  <dt>Time</dt><dd>{time.toString() /* format("DD/MM/YYYY HH:mm")*/}</dd>
 		  <dt>Temperature</dt><dd>{d.tp} °C</dd>
 		  <dt>Humidity</dt><dd>{d.hm} %</dd>
 		  <dt>Pressure</dt><dd>{d.pr/100} mbar</dd>

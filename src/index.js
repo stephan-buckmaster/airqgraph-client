@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import logo from './logo.svg';
+import './App.css';
+
 import {  ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { LatestAirVisualDeviceMeasurement } from './LatestAirVisualDeviceMeasurement';
 
@@ -13,9 +15,11 @@ const client = new ApolloClient({
 });
 
 root.render(
+  <div class="appWrapper">
   <React.StrictMode>
     <ApolloProvider client={client}>
       <LatestAirVisualDeviceMeasurement />
     </ApolloProvider>
   </React.StrictMode>
+  </div>
 );

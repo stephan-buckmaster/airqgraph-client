@@ -41,6 +41,9 @@ Place the URL in the .env file, for example:
 REACT_APP_AIRQGRAPH_SERVER_URL=http://localhost:5000/graphql
 ```
 
+# Create a map file / background
+
+Need to create a directory src/images (not included in this repository), and place a map.jpg image file in that directory.
 # Running the Application
 To start the React application, run the following command:
 
@@ -55,3 +58,4 @@ The application will be served at http://localhost:3000 by default, and you shou
 * Apollo Client: For interfacing with the GraphQL server and managing application data.
 * Node.js: As the backend runtime environment.
 * airqgraph: server for air quality data
+
