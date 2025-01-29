@@ -31,21 +31,42 @@ export function LatestAirVisualDeviceMeasurement () {
   const time = new Date(d.ts);
   const location = process.env.REACT_APP_LOCATION
   return (
-	  <div id="air-quality-data">
-	  	<h1>Air Quality Data</h1>
-		<dl>
-		  <dt>Time</dt><dd>{time.toString()}</dd>
-		  <dt>Location</dt><dd>{location}</dd>
-		  <dt>Temperature</dt><dd>{d.tp} °C</dd>
-		  <dt>Humidity</dt><dd>{d.hm} %</dd>
-		  <dt>Pressure</dt><dd>{d.pr/100} mbar</dd>
-		  <dt>US AQI</dt><dd>{d.aqius}</dd>
-		  <dt>CN AQI</dt><dd>{d.aqicn}</dd>
-		  <dt>PM2.5</dt><dd>{d.pm25.conc} µg/m³</dd>
-		  <dt>PM10</dt><dd>{d.pm10.conc} µg/m³</dd>
-		  <dt>PM1.0</dt><dd>{d.pm1.conc} µg/m³</dd>
-		  <dt>CO2</dt><dd>{d.co2} ppm</dd>
-       </dl>
-	</div>
+<div id="air-quality-data">
+  <h1 class="text-lg">Air Quality Data</h1>
+  <dl class="table-row-group mb-4">
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">Time</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {time.toString()}</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">Location</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {location}</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">Temperature</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.tp}°C</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">US AQI</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.aqius}</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">CN AQI</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.aqicn}</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">PM 1.0</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.pm1.conc} µg/m³</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">PM 2.5</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.pm25.conc} µg/m³</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">PM 10</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.pm10.conc} µg/m³</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">Pressure</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.pr/100} mbar</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">Humidity</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.hm} %</dd>
+
+    <dt class="table-cell text-left w-1/2 whitespace-nowrap">CO2</dt>
+    <dd class="table-cell text-right pl-6 pr-12 flex items-center font-bold"> {d.co2} ppm</dd>
+  </dl>
+</div>
   );
 }
